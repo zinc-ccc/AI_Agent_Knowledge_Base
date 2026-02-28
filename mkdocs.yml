@@ -1,0 +1,12 @@
+site_name: FJD HR-Nexus Knowledge Base
+site_description: 内部使用的自动化与协同经验沉淀指南
+
+theme:
+  name: material
+  language: zh
+  palette:
+    primary: indigo
+    accent: blue
+
+nav:
+  - 核心指南: index.md

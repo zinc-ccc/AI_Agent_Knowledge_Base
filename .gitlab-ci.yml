@@ -1,10 +1,17 @@
 pages:
+  image: node:lts
   stage: deploy
   script:
-    - mkdir public
-    - Copy-Item -Path ".\*" -Destination "public\" -Recurse -Exclude "public"
+    - apt-get update && apt-get install -y python3-pip python3-venv
+    - python3 -m venv venv
+    - . venv/bin/activate
+    - pip install mkdocs-material
+    - mkdir -p docs
+    - cp README.md docs/index.md
+    - mkdocs build
+    - npx netlify-cli deploy --site c5ed714e-819e-4dd3-9e19-cbb9051e8949 --auth nfp_PswGZZaFK38UKWeRSBKoWKpHkVnxtA6748ce --prod --dir=site
   artifacts:
     paths:
-      - public
+      - site
   rules:
     - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
