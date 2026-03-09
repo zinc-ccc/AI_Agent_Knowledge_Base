@@ -21,8 +21,14 @@
 为保证前期规范的有效推行与维护进度，**本知识库指南目前仅面向 HRBP 团队内部开放共创。** 后续如果公司技术等专业部门出台了统一的大基建规范，我们十分乐意融入系统并参与公司级的共建。
 
 对于 HRBP 团队内目前参与的人员，为避免知识落后，**不建议直接复制下载静态文本**。请优先通过云端拉取，保持同步更新：
-- **GitLab 源码源（唯一核心源）**：有一定 Git 基础的同事，可以直接把这个独立库（`http://git.fjdynamics.com/hr-nexus/knowledge_base`）拉取（Pull）到正在开发的新项目里。别人沉淀了经验，输入一条 `git pull` 命令，就能实现防踩坑指南的秒级同步。
-- **免密极速查阅网站体验**：不管是出差的员工还是新人，只要点开 [http://fjd-hr-nexus-knowledge-8768.netlify.app](http://fjd-hr-nexus-knowledge-8768.netlify.app) 就能瞬间浏览最新的文档。
+- **GitLab 源码源（核心共建源）**：有 Git 基础的同事，可以直接抓取或克隆本独立库（`http://git.fjdynamics.com/hr-nexus/knowledge_base`）到正在开发的新项目里。输入一条 `git pull` 即可同步。
+- **免 Git 账号一键拉取 (适合业务向同事)**：没有账号也不要紧！只需在你新项目的终端（PowerShell）中运行下面这条命令，它会直接从我们的公共网站上将最新版的 `skills` 工作流组件包拉取并解压到你本地项目的 `.agents/skills` 下：
+  ```powershell
+  Invoke-WebRequest -Uri "http://fjd-hr-nexus-knowledge-8768.netlify.app/skills.zip" -OutFile "skills.zip"; Expand-Archive -Path "skills.zip" -DestinationPath ".agents/skills" -Force; Remove-Item "skills.zip"
+  ```
+  *(拉取完后，直接对你的 Codex 发令：“请使用 `.agents/skills/hr-manual-keeper/SKILL.md` 的规范执行！” 即可瞬间套用强大的状态机约束)*
+- **无账号如何参与共建优化？（提案信箱模式）**：如果你在以上使用中发现了大坑，让你的 AI 在本地写一份 `proposal-优化点.md`。把它直接发去工作群，主理人将用秒级同步上云。随后你再跑一次👆上面的下载命令，最新的规则就又到你本地了！
+- **免密极速查阅网站体验**：随时点开 [http://fjd-hr-nexus-knowledge-8768.netlify.app](http://fjd-hr-nexus-knowledge-8768.netlify.app) 瞬间浏览最新大纲（由于部署缓存机制，如果没看到内容更新，请使用 *Ctrl+F5* 强制刷新）。
 
 ### 3. 可视化看板：方便大家跑通并结合业务共建
 团队里现在涌现了各种被 AI 写出来的自动化小脚手架。为能让大家的工具快速跑起来并避免资源浪费，后续我们会出一个**统一的云端进度追踪看板**。如果你有着急的需求，非常鼓励自我探索和开发，但也建议使用前看一眼看板，确认有没有同事已经做好了类似的东西。如果大家做了同一功能，可在这个基础上结合部门的业务逻辑共同署名合作；对于看板上已有的功能，有更好想法的话随时欢迎加入共建优化。
