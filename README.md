@@ -4,8 +4,8 @@
 
 ## 文档导航
 
-- [codex_browser_automation/README.md](./codex_browser_automation/README.md)
-  Codex 浏览器自动化全局安装、Chrome AutoConnect 真会话接管、验证步骤与可复用脚本入口。
+- [Codex 浏览器自动化工具包](./codex_browser_automation_toolkit/README.md)
+  面向团队分发的浏览器自动化工具包，包含全局安装、真实 Chrome AutoConnect、验证步骤与可复用脚本。
 - [AI_COLLABORATION_AND_METHOD_PLAYBOOK.md](./AI_COLLABORATION_AND_METHOD_PLAYBOOK.md)
   当前知识库里关于 AI 协作分工、完成状态表达和方法沉淀的正文入口。
 - [HRBP_AI_AGENT_COLLABORATION_EXPERIENCE.md](./HRBP_AI_AGENT_COLLABORATION_EXPERIENCE.md)
@@ -20,5 +20,6 @@
 - 每一篇主题文档尽量聚焦一个主题，方便后续持续补充和复用。
 - 从项目仓库同步过来的经验文档，建议保留来源背景、适用范围，必要时补一句脱敏说明。
 - 如果文档值得长期复用，优先写成中文，降低传播和复用门槛。
+
 
 
