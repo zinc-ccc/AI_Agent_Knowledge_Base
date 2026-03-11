@@ -2,10 +2,10 @@
 
 这个仓库用于沉淀可脱敏、可分享、可复用的知识文档。
 
-说明：该知识库的持续维护主版本部署在 FJD 公司的 GitLab `knowledge_base` 仓库，欢迎内部成员优先在主仓共同维护；如提供 GitHub 公开入口，则仅作为便于公开访问的脱敏镜像，展示内容均按公开范围做脱敏处理。
-
 ## 文档导航
 
+- [codex_browser_automation/README.md](./codex_browser_automation/README.md)
+  Codex 浏览器自动化全局安装、Chrome AutoConnect 真会话接管、验证步骤与可复用脚本入口。
 - [AI_COLLABORATION_AND_METHOD_PLAYBOOK.md](./AI_COLLABORATION_AND_METHOD_PLAYBOOK.md)
   当前知识库里关于 AI 协作分工、完成状态表达和方法沉淀的正文入口。
 - [HRBP_AI_AGENT_COLLABORATION_EXPERIENCE.md](./HRBP_AI_AGENT_COLLABORATION_EXPERIENCE.md)
@@ -20,3 +20,5 @@
 - 每一篇主题文档尽量聚焦一个主题，方便后续持续补充和复用。
 - 从项目仓库同步过来的经验文档，建议保留来源背景、适用范围，必要时补一句脱敏说明。
 - 如果文档值得长期复用，优先写成中文，降低传播和复用门槛。
+
+
